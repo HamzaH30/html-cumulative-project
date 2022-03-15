@@ -26,9 +26,119 @@
             <li>Work Samples & Projects</li>
           </a>
           <a href="volunteer-work.html"><li>Volunteer Work</li></a>
-          <a href="contact.html"><li></li></a>
+          <a href="contact.html"><li>Contact Hamza</li></a>
         </ol>
       </nav>
     </header>
+
+    <main>
+      <section>
+        <h1>Contact Hamza!</h1>
+        <p>
+          I'd love to hear from you!
+          <br />
+          Please complete the form below in order to get in touch with me.
+        </p>
+
+        <!-- Form that will be asking the user for their contact information, and then they can send a message to me. -->
+        <form name="user-contact-info" id="contact-info" method="get">
+          <!-- Fieldset asking for the user's contact information. -->
+          <fieldset>
+            <legend>Your Contact Information</legend>
+
+            <!-- This text input will ask the user for their first name. -->
+            <label for="fname">First Name (ex: John) [required]: </label>
+            <input type="text" name="first-name" id="fname" required />
+
+            <br />
+
+            <!-- This text input will ask the user for their last name. -->
+            <label for="lname">Last Name (ex: Doe): </label>
+            <input type="text" name="last-name" id="lname" />
+
+            <br />
+
+            <!-- This email input will ask the user for their email so that I can contact them in case I need to. -->
+            <label for="contact-email">
+              Your Email Address (ex: johndoe@gmail.com) [required]:
+            </label>
+            <input
+              type="email"
+              name="contact-email"
+              id="contact-email"
+              required
+            />
+
+            <br />
+
+            <!-- This telephone input will ask the user for their telephone number. -->
+            <label for="phone-number">
+              Your Phone Number (ex: 1-234-567-890):
+            </label>
+            <input
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              minlength="9"
+              maxlength="12"
+            />
+          </fieldset>
+
+          <br />
+
+          <!-- This fieldset will ask the user for their message they want to send to me. -->
+          <fieldset>
+            <legend>Your Message To Send</legend>
+
+            <!-- This textarea will allow the user to compose their message to sent to me. -->
+            <label for="user-message">Your Message: </label>
+            <br />
+            <textarea
+              name="user-message"
+              id="user-message"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+
+            <br />
+
+            <!-- 
+              This range input will ask the user for how urgent they 
+              expect a reply. This can help me determine when I should
+              reply to the message. 
+            -->
+            <label for="message-importance">
+              On a scale of 1 - 10, how urgent do you expect a reply?
+              [required]:
+            </label>
+            <p>
+              0
+              <input
+                type="range"
+                name="message-importance"
+                id="message-importance"
+                min="0"
+                max="10"
+                required
+              />
+              10
+            </p>
+          </fieldset>
+
+          <br />
+
+          <!-- This submit input will allow the user to submit this form and their message to me. -->
+          <input type="submit" name="submit-form" value="Send Message" />
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer separated with hr tag. Includes email and copyright. -->
+    <hr />
+    <footer>
+      <p><strong>Email:</strong> hamzahaque30@gmail.com</p>
+      <p><sup>&copy;</sup>2022 Hamza Haque</p>
+    </footer>
   </body>
 </html>
